@@ -15,7 +15,7 @@ const ProductListScreen = () => {
                 <>
                     <TouchableOpacity
                         style={styles.cartButton}
-                        onPress={() => navigation.navigate(ROUTES.CART)}
+                        onPress={() => navigation.navigate(ROUTES.CART as never)}
                     >
                         <Image
                             source={images.CART}
@@ -25,7 +25,7 @@ const ProductListScreen = () => {
                     <View style={{ width: 10 }} />
                     <TouchableOpacity
                         style={styles.cartButton}
-                        onPress={() => navigation.navigate(ROUTES.SAVE_FOR_LATER)}
+                        onPress={() => navigation.navigate(ROUTES.SAVE_FOR_LATER as never)}
                     >
                         <Image
                             source={images.SAVE_FOR_LATER}
