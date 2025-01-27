@@ -2,12 +2,13 @@ import React from 'react';
 import { View, StyleSheet, TouchableOpacity, Image } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import ProductList from '../components/ProductList';
-import { ROUTES } from '../navigation/routes';
 import { globalStyles } from '../styles/globalStyles';
 import { images } from '../constants/images';
+import { StackNavigationProp } from '@react-navigation/stack';
+import { RootStackParamList } from '../navigation/routes';
 
 const ProductListScreen = () => {
-    const navigation = useNavigation();
+    const navigation = useNavigation<StackNavigationProp<RootStackParamList>>();
 
     React.useLayoutEffect(() => {
         navigation.setOptions({
@@ -15,7 +16,7 @@ const ProductListScreen = () => {
                 <>
                     <TouchableOpacity
                         style={styles.cartButton}
-                        onPress={() => navigation.navigate(ROUTES.CART as never)}
+                        onPress={() => navigation.navigate('Cart')}
                     >
                         <Image
                             source={images.CART}
@@ -25,7 +26,7 @@ const ProductListScreen = () => {
                     <View style={{ width: 10 }} />
                     <TouchableOpacity
                         style={styles.cartButton}
-                        onPress={() => navigation.navigate(ROUTES.SAVE_FOR_LATER as never)}
+                        onPress={() => navigation.navigate('SaveForLater')}
                     >
                         <Image
                             source={images.SAVE_FOR_LATER}

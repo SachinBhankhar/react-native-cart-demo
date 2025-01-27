@@ -1,5 +1,11 @@
-export const ROUTES = {
-    PRODUCT_LIST: 'ProductList',
-    CART: 'Cart',
-    SAVE_FOR_LATER: 'SaveForLater',
+export type RootStackParamList = {
+    ProductList: undefined;
+    Cart: undefined;
+    SaveForLater: undefined;
+};
+
+declare global {
+    namespace ReactNavigation {
+        interface RootParamList extends RootStackParamList { }
+    }
 }
