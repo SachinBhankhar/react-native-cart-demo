@@ -1,4 +1,12 @@
 {
   "name": "react_native_cart_demo",
-  "displayName": "react_native_cart_demo"
+  "displayName": "react_native_cart_demo",
+  "addToCart" : "Add to Cart",
+  "products": "Products",
+  "cart": "Cart",
+  "savedForLater": "Saved for Later",
+  "remove": "Remove",
+  "moveToCart": "Move to Cart",
+  "success": "Success",
+  "hasBeenAddedToCart": " has been added to your cart."
 }
