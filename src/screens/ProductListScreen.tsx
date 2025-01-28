@@ -15,7 +15,7 @@ const ProductListScreen = () => {
             headerRight: () => (
                 <>
                     <TouchableOpacity
-                        style={styles.cartButton}
+                        style={styles.actionButton}
                         onPress={() => navigation.navigate('Cart')}
                     >
                         <Image
@@ -25,7 +25,7 @@ const ProductListScreen = () => {
                     </TouchableOpacity>
                     <View style={{ width: 10 }} />
                     <TouchableOpacity
-                        style={styles.cartButton}
+                        style={styles.actionButton}
                         onPress={() => navigation.navigate('SaveForLater')}
                     >
                         <Image
@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
     },
-    cartButton: {
+    actionButton: {
         marginRight: 10,
     },
 });

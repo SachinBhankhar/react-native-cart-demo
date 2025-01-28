@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, Button, FlatList, Image, TouchableOpacity } from 'react-native';
+import { View, Text, FlatList, Image, TouchableOpacity } from 'react-native';
 import { ADD_TO_CART, TOGGLE_SAVE_FOR_LATER } from '../context/actionTypes';
 import { products } from '../data/products';
 import { addToCart } from '../../app.json';
@@ -34,7 +34,6 @@ const ProductList = () => {
                         <Text style={globalStyles.productName}>{item.name}</Text>
                         <View style={{ flex: 1 }} />
                         <TouchableOpacity
-                            style={globalStyles.cartButton}
                             onPress={() => dispatch({ type: TOGGLE_SAVE_FOR_LATER, productId: item.id })}
                         >
                             <Image

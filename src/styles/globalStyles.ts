@@ -44,9 +44,6 @@ export const globalStyles = StyleSheet.create({
         color: '#888',
         marginVertical: 5,
     },
-    cartButton: {
-        marginRight: 10,
-    },
     icon: {
         width: 24,
         height: 24,

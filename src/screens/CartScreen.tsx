@@ -38,9 +38,6 @@ const styles = StyleSheet.create({
     cartList: {
         paddingBottom: 20,
     },
-    cartButton: {
-        marginRight: 10,
-    },
 });
 
 export default CartScreen;
