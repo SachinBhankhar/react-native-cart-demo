@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, Button, StyleSheet, FlatList, Image } from 'react-native';
+import { View, Text, Button, StyleSheet, FlatList, Image, TouchableOpacity } from 'react-native';
 import { MOVE_TO_CART } from '../context/actionTypes';
 import { Product } from '../context/types';
 import { moveToCart } from "../../app.json";
@@ -15,11 +15,9 @@ const SaveForLaterList = () => {
             <View style={globalStyles.productDetails}>
                 <Text style={globalStyles.productName}>{item.name}</Text>
                 <Text style={globalStyles.productPrice}>${item.price.toFixed(2)}</Text>
-                <Button
-                    color={globalStyles.button.color}
-                    title={moveToCart}
-                    onPress={() => dispatch({ type: MOVE_TO_CART, productId: item.id })}
-                />
+                <TouchableOpacity style={globalStyles.button} onPress={() => dispatch({ type: MOVE_TO_CART, productId: item.id })}>
+                    <Text style={globalStyles.buttonText}>{moveToCart}</Text>
+                </TouchableOpacity>
             </View>
         </View>
     );

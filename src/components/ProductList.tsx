@@ -45,10 +45,9 @@ const ProductList = () => {
                         </TouchableOpacity>
                     </View>
                     <Text style={globalStyles.productPrice}>${item.price.toFixed(2)}</Text>
-                    <Button
-                        color={globalStyles.button.color}
-                        title={addToCart}
-                        onPress={() => handleAddToCart(item)} />
+                    <TouchableOpacity style={globalStyles.button} onPress={() => handleAddToCart(item)}>
+                        <Text style={globalStyles.buttonText}>{addToCart}</Text>
+                    </TouchableOpacity>
                 </View>
             </View>
         );

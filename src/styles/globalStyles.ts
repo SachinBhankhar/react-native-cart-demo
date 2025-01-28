@@ -1,9 +1,14 @@
 import { StyleSheet } from 'react-native';
 
 export const globalStyles = StyleSheet.create({
-    row: { flexDirection: 'row' },
+    row: {
+        flexDirection: 'row'
+    },
     button: {
-        color: 'green',
+        backgroundColor: 'green',
+        padding: 10,
+        borderRadius: 8,
+        alignItems: 'center',
     },
     container: {
         flex: 1,
@@ -19,15 +24,12 @@ export const globalStyles = StyleSheet.create({
         marginBottom: 10,
         borderRadius: 8,
         overflow: 'hidden',
-        shadowColor: '#000',
-        shadowOpacity: 0.1,
-        shadowOffset: { width: 0, height: 2 },
-        shadowRadius: 8,
         padding: 10,
     },
     productImage: {
         width: 100,
-        height: 100,
+        height: 'auto',
+        borderRadius: 8,
     },
     productDetails: {
         flex: 1,
@@ -49,4 +51,8 @@ export const globalStyles = StyleSheet.create({
         width: 24,
         height: 24,
     },
+    buttonText: {
+        color: '#fff',
+        fontWeight: 'bold',
+    }
 });

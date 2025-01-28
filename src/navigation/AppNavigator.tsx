@@ -4,7 +4,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import ProductListScreen from '../screens/ProductListScreen';
 import CartScreen from '../screens/CartScreen';
 import SaveForLaterScreen from '../screens/SaveForLaterScreen';
-import { ROUTES, RootStackParamList } from './routes';
+import { RootStackParamList } from './routes';
 import { savedForLater, cart, products } from '../../app.json';
 
 const Stack = createStackNavigator<RootStackParamList>();
